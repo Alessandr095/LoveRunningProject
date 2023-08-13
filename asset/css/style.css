@@ -19,7 +19,7 @@ body {
 
 /* Header */
 header {
-    background-color:#ffffff;
+    background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
@@ -29,6 +29,7 @@ header {
     justify-content: space-between;
     align-items: baseline;
 }
+
 header a {
     text-decoration: none;
     color: inherit;
@@ -40,42 +41,48 @@ h1 {
     letter-spacing: 2px;
     color: #252525;
 }
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
-    
+
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
-.active{
+
+.active {
     border-bottom: 1px solid #3a3a3a;
 
 }
+
 /* Navbar styles with dropdown toggle*/
-nav{
+nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
-    left:0;
+    left: 0;
     display: none;
     top: 100%;
-    }
-    /* Nav toggle*/
-    #nav-toggle:checked~nav{
-        display: block;
-    }
-    #nav-toggle{
-        display: none;
+}
 
-    }
-    .nav-toggle-label{
-        font-size: 2rem;
-    }
+/* Nav toggle*/
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
 
 
 
@@ -90,3 +97,24 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media query: tablets and larger (768px and larger)*/
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu{
+        display: flex;
+    }
+    #menu > li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+}
+
