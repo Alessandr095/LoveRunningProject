@@ -1,5 +1,6 @@
 /* Import Google font type */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200; 300; 400; 500; 600; 700&display=swap');
+
 
 /* Asterisk wildcard to override default styles applied by browser*/
 * {
@@ -107,23 +108,35 @@ footer {
         width: fit-content;
         padding-right: 1rem;
     }
-    #menu{
+
+    /* media query: screens larger that 992px */
+    @media screen and (min-width: 992px) {
+        #menu a:hover {
+            border-bottom: 1px solid #3a3a3a;
+
+        }
+    }
+
+    #menu {
         display: flex;
     }
-    #menu > li {
+
+    #menu>li {
         padding-left: 1rem;
     }
+
     .nav-toggle-label {
         display: none;
     }
+
     #logo {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
+
     /* Main content*/
     main {
         margin-top: 79px;
     }
 }
-
